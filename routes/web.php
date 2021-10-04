@@ -32,3 +32,17 @@ Route::get('/nama-saya-adalah/{nama?}', function ($nama = 'Wajib Diisi') {
 Route::get('/hitung-luas-segitiga/{alas}/{tinggi}', function ($alas, $tinggi) {
     return 'hasil luas segitiga nya : ' . ($alas * $tinggi) * 0.5;
 });
+
+//routes group
+Route::group(['prefix' => 'jurusan'], function () {
+    Route::get('/', function () {
+        return ('berhasil');
+    });
+    Route::get('/kelas/{namaKelas}', function ($namaKelas) {
+        return $namaKelas;
+    });
+    Route::get('/wali-kelas/{nama}', function ($nama) {
+        return $nama;
+    });
+
+});
