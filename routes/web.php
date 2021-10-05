@@ -49,7 +49,13 @@ Route::group(['prefix' => 'jurusan'], function () {
 
 });
 
+//pakai controllers
 Route::get('data-siswa', [DataSiswaController::class, 'datasiswa']);
 Route::get('data-siswi', [DataSiswaController::class, 'datasiswi']);
 
 Route::resource('user', UserController::class);
+
+//index.blade
+Route::get('profile', function () {
+    return view('profile.index');
+});
