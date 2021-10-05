@@ -39,7 +39,7 @@
         Angka ke- {{ $i }} <br>
     @endfor
     <br><br>
-
+    {{-- angka ganjil genap --}}
     @for ($i = 1; $i <= 10; $i++)
         @if ($i % 2 == 0)
             Angka genap {{ $i }} <br>
@@ -47,7 +47,7 @@
             Angka ganjil {{ $i }} <br>
         @endif
     @endfor
-
+    {{-- menambahkan warna --}}
     @php
         $warna = '<div style="color: red">Adya</div>';
     @endphp
